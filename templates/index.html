@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div id="game">
+        <div id="header">Multiplayer Card Game</div>
+        <div id="players">
+            <!-- Player list will be populated here -->
+        </div>
+        <div id="hand">
+            <!-- Player's hand will be displayed here -->
+        </div>
+        <div id="tricks">
+            <!-- Played tricks will be displayed here -->
+        </div>
+        <div id="scores">
+            <!-- Scoreboard will be displayed here -->
+        </div>
+        <div id="controls">
+            <input type="text" id="username" placeholder="Enter your username">
+            <button id="joinBtn">Join Game</button>
+            <button id="startBtn">Start Game</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="/static/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#players, #hand, #tricks, #scores, #controls {
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#players {
+    display: flex;
+    justify-content: space-around;
+}
+
+#players div {
+    background-color: #e7f4e4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+#hand {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 50px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 1.2em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#tricks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#tricks div {
+    background-color: #e7f4e4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px;
+    flex: 1;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-around;
+}
+
+#scores div {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#controls {
+    text-align: center;
+}
+
+#controls input {
+    padding: 10px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#controls button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#controls button:hover {
+    background-color: #45a049;
+}
