@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit, join_room, leave_room
 import random
 
@@ -36,6 +36,7 @@ def deal_cards():
         deck = deck[13:]
         player['predictions'] = 0
         player['tricks_won'] = 0
+        player['has_predicted'] = False
     first_player_index = (current_dealer + 1) % len(players)
     current_player_index = first_player_index
     emit('deal', {'players': players, 'current_trump': suits[current_trump]}, broadcast=True)
@@ -78,7 +79,8 @@ def on_join(data):
         'hand': [],
         'predictions': 0,
         'tricks_won': 0,
-        'score': 0
+        'score': 0,
+        'has_predicted': False
     }
     players.append(new_player)
     emit('updatePlayers', players, broadcast=True)
@@ -99,7 +101,9 @@ def make_prediction(data):
     for player in players:
         if player['id'] == player_id:
             player['predictions'] = prediction
-    emit('updatePlayers', players, broadcast=True)
+            player['has_predicted'] = True
+    if all(player['has_predicted'] for player in players):
+        emit('updatePlayers', players, broadcast=True)
 
 @socketio.on('playCard')
 def play_card(data):

@@ -1,0 +1,297 @@
+Last login: Mon Jul  8 20:22:14 on ttys000
+home@Samarths-Air ~ % cd /Applications/Python\ 3.12/Online\ Decision\ Game
+home@Samarths-Air Online Decision Game % git init
+Reinitialized existing Git repository in /Applications/Python 3.12/Online Decision Game/.git/
+home@Samarths-Air Online Decision Game % git add .
+home@Samarths-Air Online Decision Game % git config --global user.email "samarth1971puri@gmail.com"
+home@Samarths-Air Online Decision Game % git config --global user.name "Samarth Bharat Puri"
+home@Samarths-Air Online Decision Game % git commit -m "Add all necessary files for deployment"
+
+On branch main
+nothing to commit, working tree clean
+home@Samarths-Air Online Decision Game % git remote add origin https://github.com/puri86147/Online-Decision-Game
+error: remote origin already exists.
+home@Samarths-Air Online Decision Game % git branch -M main
+
+home@Samarths-Air Online Decision Game % git push -u origin main
+
+Username for 'https://github.com': puri86147 
+Password for 'https://puri86147@github.com': 
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (13/13), 4.68 KiB | 4.68 MiB/s, done.
+Total 13 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/puri86147/Online-Decision-Game
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+home@Samarths-Air Online Decision Game % git add requirements.txt
+home@Samarths-Air Online Decision Game % git commit -m "Add gunicorn to requirements"
+[main 7dd1246] Add gunicorn to requirements
+ 1 file changed, 1 insertion(+)
+home@Samarths-Air Online Decision Game % git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 343.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/puri86147/Online-Decision-Game
+   9c87854..7dd1246  main -> main
+home@Samarths-Air Online Decision Game % git commit -m "Your commit message"
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   requirements.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+home@Samarths-Air Online Decision Game % git push origin main
+
+Everything up-to-date
+home@Samarths-Air Online Decision Game % git add requirements.txt
+home@Samarths-Air Online Decision Game % git commit -m
+error: switch `m' requires a value
+home@Samarths-Air Online Decision Game % git commit -m "Add newer Flask"   
+[main 782747d] Add newer Flask
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+home@Samarths-Air Online Decision Game % pip show flask
+zsh: command not found: pip
+home@Samarths-Air Online Decision Game % python --version
+
+zsh: command not found: python
+home@Samarths-Air Online Decision Game % python3 --version
+
+Python 3.12.3
+home@Samarths-Air Online Decision Game % pip3 --version
+
+pip 24.0 from /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/pip (python 3.12)
+home@Samarths-Air Online Decision Game % which python3
+/Library/Frameworks/Python.framework/Versions/3.12/bin/python3
+home@Samarths-Air Online Decision Game % which pip3
+/Library/Frameworks/Python.framework/Versions/3.12/bin/pip3
+home@Samarths-Air Online Decision Game % echo 'export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.12/bin' >> ~/.zshrc
+source ~/.zshrc
+
+home@Samarths-Air Online Decision Game % export PATH=$PATH:/Library/Frameworks/Python.framework/Versions/3.12/bin
+
+home@Samarths-Air Online Decision Game % python3 --version
+
+Python 3.12.3
+home@Samarths-Air Online Decision Game % python3 -m venv venv
+
+home@Samarths-Air Online Decision Game % source venv/bin/activate
+
+(venv) home@Samarths-Air Online Decision Game % pip show flask
+
+WARNING: Package(s) not found: flask
+(venv) home@Samarths-Air Online Decision Game % pip install Flask
+
+Collecting Flask
+  Downloading flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting Werkzeug>=3.0.0 (from Flask)
+  Downloading werkzeug-3.0.3-py3-none-any.whl.metadata (3.7 kB)
+Collecting Jinja2>=3.1.2 (from Flask)
+  Downloading jinja2-3.1.4-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.1.2 (from Flask)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting click>=8.1.3 (from Flask)
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting blinker>=1.6.2 (from Flask)
+  Downloading blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting MarkupSafe>=2.0 (from Jinja2>=3.1.2->Flask)
+  Using cached MarkupSafe-2.1.5-cp312-cp312-macosx_10_9_universal2.whl.metadata (3.0 kB)
+Downloading flask-3.0.3-py3-none-any.whl (101 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 101.7/101.7 kB 6.3 MB/s eta 0:00:00
+Downloading blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.4-py3-none-any.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 22.4 MB/s eta 0:00:00
+Downloading werkzeug-3.0.3-py3-none-any.whl (227 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 227.3/227.3 kB 20.5 MB/s eta 0:00:00
+Using cached MarkupSafe-2.1.5-cp312-cp312-macosx_10_9_universal2.whl (18 kB)
+Installing collected packages: MarkupSafe, itsdangerous, click, blinker, Werkzeug, Jinja2, Flask
+Successfully installed Flask-3.0.3 Jinja2-3.1.4 MarkupSafe-2.1.5 Werkzeug-3.0.3 blinker-1.8.2 click-8.1.7 itsdangerous-2.2.0
+
+[notice] A new release of pip is available: 24.0 -> 24.1.2
+[notice] To update, run: pip install --upgrade pip
+(venv) home@Samarths-Air Online Decision Game % pip show flask
+
+Name: Flask
+Version: 3.0.3
+Summary: A simple framework for building complex web applications.
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /Applications/Python 3.12/Online Decision Game/venv/lib/python3.12/site-packages
+Requires: blinker, click, itsdangerous, Jinja2, Werkzeug
+Required-by: 
+(venv) home@Samarths-Air Online Decision Game % python your_application.py
+
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Applications/Python 3.12/Online Decision Game/your_application.py': [Errno 2] No such file or directory
+(venv) home@Samarths-Air Online Decision Game % python Online_Decision_Game.py
+/Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python: can't open file '/Applications/Python 3.12/Online Decision Game/Online_Decision_Game.py': [Errno 2] No such file or directory
+(venv) home@Samarths-Air Online Decision Game % pip show flask
+
+Name: Flask
+Version: 3.0.3
+Summary: A simple framework for building complex web applications.
+Home-page: 
+Author: 
+Author-email: 
+License: 
+Location: /Applications/Python 3.12/Online Decision Game/venv/lib/python3.12/site-packages
+Requires: blinker, click, itsdangerous, Jinja2, Werkzeug
+Required-by: 
+(venv) home@Samarths-Air Online Decision Game % pip install --upgrade Flask
+
+Requirement already satisfied: Flask in ./venv/lib/python3.12/site-packages (3.0.3)
+Requirement already satisfied: Werkzeug>=3.0.0 in ./venv/lib/python3.12/site-packages (from Flask) (3.0.3)
+Requirement already satisfied: Jinja2>=3.1.2 in ./venv/lib/python3.12/site-packages (from Flask) (3.1.4)
+Requirement already satisfied: itsdangerous>=2.1.2 in ./venv/lib/python3.12/site-packages (from Flask) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in ./venv/lib/python3.12/site-packages (from Flask) (8.1.7)
+Requirement already satisfied: blinker>=1.6.2 in ./venv/lib/python3.12/site-packages (from Flask) (1.8.2)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venv/lib/python3.12/site-packages (from Jinja2>=3.1.2->Flask) (2.1.5)
+
+[notice] A new release of pip is available: 24.0 -> 24.1.2
+[notice] To update, run: pip install --upgrade pip
+(venv) home@Samarths-Air Online Decision Game % pip install --upgrade pip
+Requirement already satisfied: pip in ./venv/lib/python3.12/site-packages (24.0)
+Collecting pip
+  Downloading pip-24.1.2-py3-none-any.whl.metadata (3.6 kB)
+Downloading pip-24.1.2-py3-none-any.whl (1.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 6.2 MB/s eta 0:00:00
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-24.1.2
+(venv) home@Samarths-Air Online Decision Game % python app.py
+
+Traceback (most recent call last):
+  File "/Applications/Python 3.12/Online Decision Game/app.py", line 2, in <module>
+    from flask_socketio import SocketIO, emit, join_room, leave_room
+ModuleNotFoundError: No module named 'flask_socketio'
+(venv) home@Samarths-Air Online Decision Game % pip install flask_socketio
+
+Collecting flask_socketio
+  Using cached Flask_SocketIO-5.3.6-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: Flask>=0.9 in ./venv/lib/python3.12/site-packages (from flask_socketio) (3.0.3)
+Collecting python-socketio>=5.0.2 (from flask_socketio)
+  Downloading python_socketio-5.11.3-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: Werkzeug>=3.0.0 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (3.0.3)
+Requirement already satisfied: Jinja2>=3.1.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (3.1.4)
+Requirement already satisfied: itsdangerous>=2.1.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (8.1.7)
+Requirement already satisfied: blinker>=1.6.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (1.8.2)
+Collecting bidict>=0.21.0 (from python-socketio>=5.0.2->flask_socketio)
+  Using cached bidict-0.23.1-py3-none-any.whl.metadata (8.7 kB)
+Collecting python-engineio>=4.8.0 (from python-socketio>=5.0.2->flask_socketio)
+  Downloading python_engineio-4.9.1-py3-none-any.whl.metadata (2.2 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venv/lib/python3.12/site-packages (from Jinja2>=3.1.2->Flask>=0.9->flask_socketio) (2.1.5)
+Collecting simple-websocket>=0.10.0 (from python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio)
+  Using cached simple_websocket-1.0.0-py3-none-any.whl.metadata (1.3 kB)
+Collecting wsproto (from simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio)
+  Using cached wsproto-1.2.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting h11<1,>=0.9.0 (from wsproto->simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio)
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached Flask_SocketIO-5.3.6-py3-none-any.whl (18 kB)
+Downloading python_socketio-5.11.3-py3-none-any.whl (76 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.2/76.2 kB 5.3 MB/s eta 0:00:00
+Using cached bidict-0.23.1-py3-none-any.whl (32 kB)
+Downloading python_engineio-4.9.1-py3-none-any.whl (57 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 9.5 MB/s eta 0:00:00
+Using cached simple_websocket-1.0.0-py3-none-any.whl (13 kB)
+Using cached wsproto-1.2.0-py3-none-any.whl (24 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Installing collected packages: h11, bidict, wsproto, simple-websocket, python-engineio, python-socketio, flask_socketio
+Successfully installed bidict-0.23.1 flask_socketio-5.3.6 h11-0.14.0 python-engineio-4.9.1 python-socketio-5.11.3 simple-websocket-1.0.0 wsproto-1.2.0
+(venv) home@Samarths-Air Online Decision Game % pip install flask_socketio
+
+Requirement already satisfied: flask_socketio in ./venv/lib/python3.12/site-packages (5.3.6)
+Requirement already satisfied: Flask>=0.9 in ./venv/lib/python3.12/site-packages (from flask_socketio) (3.0.3)
+Requirement already satisfied: python-socketio>=5.0.2 in ./venv/lib/python3.12/site-packages (from flask_socketio) (5.11.3)
+Requirement already satisfied: Werkzeug>=3.0.0 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (3.0.3)
+Requirement already satisfied: Jinja2>=3.1.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (3.1.4)
+Requirement already satisfied: itsdangerous>=2.1.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (8.1.7)
+Requirement already satisfied: blinker>=1.6.2 in ./venv/lib/python3.12/site-packages (from Flask>=0.9->flask_socketio) (1.8.2)
+Requirement already satisfied: bidict>=0.21.0 in ./venv/lib/python3.12/site-packages (from python-socketio>=5.0.2->flask_socketio) (0.23.1)
+Requirement already satisfied: python-engineio>=4.8.0 in ./venv/lib/python3.12/site-packages (from python-socketio>=5.0.2->flask_socketio) (4.9.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./venv/lib/python3.12/site-packages (from Jinja2>=3.1.2->Flask>=0.9->flask_socketio) (2.1.5)
+Requirement already satisfied: simple-websocket>=0.10.0 in ./venv/lib/python3.12/site-packages (from python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio) (1.0.0)
+Requirement already satisfied: wsproto in ./venv/lib/python3.12/site-packages (from simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio) (1.2.0)
+Requirement already satisfied: h11<1,>=0.9.0 in ./venv/lib/python3.12/site-packages (from wsproto->simple-websocket>=0.10.0->python-engineio>=4.8.0->python-socketio>=5.0.2->flask_socketio) (0.14.0)
+(venv) home@Samarths-Air Online Decision Game % python /Applications/Python\ 3.12/Online\ Decision\ Game/app.py
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 102-803-936
+127.0.0.1 - - [09/Jul/2024 14:23:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 14:23:23] "GET /static/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 14:23:23] "GET /static/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 14:23:23] "GET /favicon.ico HTTP/1.1" 404 -
+^C%                                                                             (venv) home@Samarths-Air Online Decision Game % python3 app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 102-803-936
+127.0.0.1 - - [09/Jul/2024 16:38:24] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 16:38:24] "GET /static/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 16:38:25] "GET /static/main.js HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 16:38:25] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jul/2024 16:38:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [09/Jul/2024 16:38:35] "GET /static/styles.css HTTP/1.1" 304 -
+127.0.0.1 - - [09/Jul/2024 16:38:35] "GET /static/main.js HTTP/1.1" 304 -
+127.0.0.1 - - [09/Jul/2024 16:38:36] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 -
+127.0.0.1 - - [09/Jul/2024 16:38:36] "GET /apple-touch-icon.png HTTP/1.1" 404 -
+^C%                                                                             (venv) home@Samarths-Air Online Decision Game % 
+(venv) home@Samarths-Air Online Decision Game % 
+(venv) home@Samarths-Air Online Decision Game % 
+(venv) home@Samarths-Air Online Decision Game %  pip freeze > requirements.txt
+
+(venv) home@Samarths-Air Online Decision Game % nano .gitignore
+
+
+  UW PICO 5.09                    File: .gitignore                    Modified  
+
+__pycache__/
+*.pyc
+instance/
+.webassets-cache
+.env
+.DS_Store
+*.sqlite3
+*.log
+venv/
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
